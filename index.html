@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/styles/app.css">
+
+  </head>
+  <body>
+    <h1 class="title">Etch A Sketch</h1>
+    <div class="container">
+      <section class="option-board">
+        <div class="row">
+          <label for="options">Options</label>
+          <ul class="options">
+            <li class="option tool" id="brush">
+              <img src="assets/brush.png" alt="" class="brush-image">
+              <span>Brush</span>
+            </li>
+            <li class="option tool" id="eraser">
+              <img src="assets/eraser.png" alt="" class="eraser-image">
+              <span>Eraser</span>
+            </li>
+          </ul>
+        </div>
+        <div class="row colors">
+          <label for="">Colors</label>
+          <ul class="options">
+            <div class="first">
+              <li class="option color" id="white"></li>
+              <li class="option color" id="black"></li>
+              <li class="option color" id="#E02020"></li>
+            </div>
+            <div class="second">
+              <li class="option color" id="#6DD400"></li>
+              <li class="option color" id="#ffb6c1"></li>
+              <li class="option multiple-color" id="others">
+                <input type="color" id="color-picker" value="#4A98F7">
+              </li>
+            </div>
+          </ul>
+        </div>
+        <div class="row size">
+          <label for="options">Size</label>
+          <ul class="options">
+            <li class="option">
+              <input type="range" class="size-slider" min="1" max="64" step="1" value="50">
+            </li>
+            <span class="size-number">50x50</span>
+          </ul>
+        </div>
+        <div class="row buttons">
+          <button class="clear-canvas">Clear Canvas</button>
+        </div>
+      </section>
+      <section class="drawing-board">
+      </section>
+    </div>
+    <p class="copyright">Copyright &copy; 2023 lephuocloc</p>
+
+    <script src="script.js"></script>
+  </body>
+</html>

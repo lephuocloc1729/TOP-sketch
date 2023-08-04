@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 60px;
+  color: white;
+}
+.copyright {
+  color: white;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: lightseagreen;
+}
+.container {
+  display: flex;
+  width: 70%;
+  gap: 30px;
+  padding: 10px;
+  height: 600px;
+}
+section {
+  background-color: white;
+  border-radius:  10px;
+}
+img {
+  width: 30px;
+}
+.option-board {
+  padding: 15px 22px 0;
+  height: 550px;
+  min-width: 180px;
+}
+.option-board .row {
+  margin-bottom: 50px;
+}
+
+.row .options {
+  list-style: none;
+  margin: 10px 0 0 5px;
+}
+.options .option {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.option span {
+  font-size: 30px;
+}
+.option:is(:hover, .active) span {
+  color: lightseagreen;
+}
+.option:is(:hover, .active) img {
+  filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%);
+}
+.option .size-slider {
+  width: 100%;
+  height: 5px;
+  color: lightseagreen;
+}
+.colors .options {
+  display: flex;
+  flex-direction: column;
+}
+.colors .options div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.colors .first .option ,
+.colors .second .option  {
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  position: relative; 
+}
+.colors .first .option:nth-child(1){
+   background-color: white;
+   border: 1px solid #bfbfbf;
+}
+.colors .first .option:nth-child(2){
+  background-color: black;
+}
+.colors .first .option:nth-child(3){
+  background-color: #E02020;
+}
+.colors .second .option:nth-child(1){
+  background-color: #6DD400;
+}
+.colors .second .option:nth-child(2){
+  background-color: #ffb6c1;
+}
+.colors .second .option:nth-child(3){
+  background-color: #4A98F7 ;
+}
+.colors .option:is(:hover, .selected)::before {
+  position: absolute;
+  content: "";
+  top: 2px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+  background: inherit;
+  border-radius: inherit;
+  border: 2px solid white;
+}
+.colors .first .option:first-child:is(:hover, .selected)::before {
+  border-color: #bfbfbf;
+  top: 1px;
+  left: 1px; 
+}
+.option #color-picker {
+  opacity: 0;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+.buttons button {
+  margin-bottom: 10px;
+  padding: 10px 0;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.buttons .clear-canvas {
+  background-color: white;
+  border: 2px solid #bfbfbf;
+  color: rgb(100, 100, 100);
+  transition: all 0.25s;
+  font-size: 1rem;
+}
+.buttons .clear-canvas:hover {
+  background-color: rgb(100, 100, 100);
+  border-color: rgb(100, 100, 100);
+  color: white;
+}
+
+.option-board :where(span, label) {
+  color: rgb(130, 130, 130);
+  padding-left: 10px;
+  font-size: 20px;
+}
+.size-number {
+  margin-left: 23px;
+}
+.drawing-board {
+  width: 550px;
+  height: 550px;
+  display: flex;
+  flex-direction: row;
+}
+
+.drawing-board .pixel{
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
